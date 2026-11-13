@@ -14,8 +14,9 @@ from pathlib import Path
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. RUTAS
 # ─────────────────────────────────────────────────────────────────────────────
-CARPETA_DATOS = Path(r"C:\BD")
-CARPETA_SALIDA = Path(r"C:\BD\resultados")
+RAIZ = Path(__file__).parent
+CARPETA_DATOS = RAIZ / "BD"
+CARPETA_SALIDA = RAIZ / "resultados"
 
 
 
