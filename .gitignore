@@ -1,0 +1,8 @@
+BD/
+BD_compartir/
+resultados/
+__pycache__/
+*.gpkg
+*.parquet
+.ipynb_checkpoints/
+limpiar_bases.py
