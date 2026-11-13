@@ -1,0 +1,30 @@
+# Entorno para el índice de precios de vivienda con modelos espaciales.
+#
+# Crear:       mamba env create -f environment.yml      (o: conda env create -f environment.yml)
+# Activar:     mamba activate indice_precios
+# Actualizar:  mamba env update -f environment.yml --prune
+# Jupyter:     python -m ipykernel install --user --name indice_precios --display-name "Python (indice_precios)"
+
+
+name: indice_precios
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  # Datos
+  - pandas>=2.2
+  - numpy>=1.26
+  - pyarrow          # para leer .parquet (opcional)
+  # Espacial
+  - geopandas>=1.0
+  - pyogrio          # lectura/escritura rápida de .gpkg
+  - shapely>=2.0
+  - scipy            # KDTree para el rezago espacial en la predicción
+  - libpysal>=4.10   # matrices de pesos KNN
+  - spreg>=1.8       # OLS, SAR y SDM (ML_Lag con slx_lags)
+  # Visualización
+  - matplotlib
+  - seaborn
+  - plotly
+  # Notebooks
+  - ipykernel
