@@ -9,14 +9,15 @@ cambios en la composición de la oferta.
 ## Contenido
 
 ```
-├── indice_precios.py      # proceso completo (no requiere edición)
-├── config.py              # rutas, periodos, variables y submercados por estudio
-├── environment.yml        # dependencias
-├── environment.lock.yml   # versiones exactas usadas
-├── BD/                    # datos de entrada
+├── indice_precios.py         # proceso completo (no requiere edición)
+├── config.py                 # rutas, periodos, variables y submercados por estudio
+├── diccionario_variables.csv # descripción de cada variable
+├── environment.yml           # dependencias
+├── environment.lock.yml      # versiones exactas usadas
+├── BD/                       # datos de entrada (descargar de Zenodo)
 │   ├── rejilla_casas_zmcdmx.gpkg
 │   └── <periodo>_<ciudad>_<tipo>.gpkg
-└── resultados/            # se crea al correr
+└── resultados/               # se crea al correr
 ```
 
 ## Instalación
@@ -33,8 +34,10 @@ mamba env create -f environment.yml
 mamba activate indice_precios
 ```
 ## Datos
-Las bases están en Zenodo: https://doi.org/10.5281/zenodo.24181847
-Descárgalas y colócalas en la carpeta `c:/BD/`.
+Las bases están en Zenodo, con acceso bajo solicitud: https://doi.org/10.5281/zenodo.24181847
+
+Solicita acceso desde esa página, descarga los archivos y colócalos en la carpeta `BD/`
+dentro del proyecto (ver estructura en *Contenido*).
 
 
 ## Uso
